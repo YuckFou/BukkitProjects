@@ -1,0 +1,8 @@
+main: net.junnesejer.bukkit.plugins.examplemain
+name: example
+version: 1.0
+author: Junnesejer
+description: example
+commands:
+    xp:
+        description: gives xp to player
