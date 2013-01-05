@@ -1,0 +1,18 @@
+main: net.junnesejer.bukkit.plugins.Main
+name: FriendsSystem
+version: 0.1
+authors: Junnesejer
+descriptions: Beta
+commands:
+    friend:
+        description: Requests to add a friend
+        usage: /friend <playername>
+    friendaccept
+        description: Accepts a friend request
+        usage: /friendaccept <playername>
+    friends:
+        description: Shows a list of friends you have
+        usage: /friends
+    frienddel:
+        description: Deletes a friend from your friend list.
+        usage: /frienddel <playername>
