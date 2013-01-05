@@ -10,6 +10,9 @@ commands:
     friendaccept
         description: Accepts a friend request
         usage: /friendaccept <playername>
+    frienddeny
+        description: Denies a friend request
+        usage: /frienddeny <playername>
     friends:
         description: Shows a list of friends you have
         usage: /friends
