@@ -49,7 +49,7 @@ public class Main extends JavaPlugin{
 							//first add them to their lists
 							this.activePlayers.add(sendername);
 							this.requested.add(playername);
-							sender
+							
 						}
 					}
 				}
