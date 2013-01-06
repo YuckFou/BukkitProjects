@@ -44,16 +44,16 @@ public class Main extends JavaPlugin{
 					this.getCommand("friend").setExecutor(new FriendReqExecutor(this));
 				}
 				else if(commandLabel.equalsIgnoreCase("friendaccept")){
-					this.getCommand("friend").setExecutor(new FriendAcceptExecutor(this));
+					this.getCommand("friendaccept").setExecutor(new FriendAcceptExecutor(this));
 				}
 				else if(commandLabel.equalsIgnoreCase("frienddeny")){
-					this.getCommand("friend").setExecutor(new FriendDenyExecutor(this));
+					this.getCommand("frienddeny").setExecutor(new FriendDenyExecutor(this));
 				}
 				else if(commandLabel.equalsIgnoreCase("friends")){
-					this.getCommand("friend").setExecutor(new FriendListExecutor(this));
+					this.getCommand("friends").setExecutor(new FriendListExecutor(this));
 				}
 				else if(commandLabel.equalsIgnoreCase("frienddel")){
-					this.getCommand("friend").setExecutor(new FriendDeleteExecutor(this));
+					this.getCommand("frienddel").setExecutor(new FriendDeleteExecutor(this));
 				}
 			}
 			else {
