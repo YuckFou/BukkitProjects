@@ -3,27 +3,30 @@ package net.junnesejer.bukkit.plugins;
 import java.io.File;
 import java.util.logging.Logger;
 
-import net.junnesejer.bukkit.plugins.util.FriendAcceptExecutor;
-import net.junnesejer.bukkit.plugins.util.FriendDeleteExecutor;
-import net.junnesejer.bukkit.plugins.util.FriendDenyExecutor;
-import net.junnesejer.bukkit.plugins.util.FriendListExecutor;
-import net.junnesejer.bukkit.plugins.util.FriendReqExecutor;
-
+//import all from util package, makes life easier :)
+import net.junnesejer.bukkit.plugins.util.*;
+//don't try to import all from *bukkit, might cause overload!
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-//Please note I use the latest dev build 1.4.6-R0.4!
+//Using latest dev build 1.4.6-R0.4!
 public class Main extends JavaPlugin{
 	
+	//get logger but also info from plugin (second line)
 	Logger getLogger = this.getLogger();
+	PluginDescriptionFile pdFile = this.getDescription();
 	
 	@Override
 	public void onDisable(){
-		
+		getLogger.info(ChatColor.YELLOW + "========================");
+		getLogger.info(ChatColor.RED + "We're sad to see you go! :(!");
+		getLogger.info(ChatColor.YELLOW + pdFile.getName() + ChatColor.WHITE + " has been disabled!");
+		getLogger.info(ChatColor.YELLOW + "========================");
 	}
 	
 	@Override
@@ -33,8 +36,10 @@ public class Main extends JavaPlugin{
 		String pluginFolder = this.getDataFolder().getAbsolutePath();
 		(new File(pluginFolder)).mkdirs();
 		
-			String x = ListStore.ReturnString(this.getDataFolder().getAbsolutePath());
-		    getLogger.info(x);
+		getLogger.info(ChatColor.YELLOW + "========================");
+		getLogger.info(ChatColor.RED + "We are happy to see you!");
+		getLogger.info(ChatColor.YELLOW + pdFile.getName() + ChatColor.WHITE + " has been enabled!");
+		getLogger.info(ChatColor.YELLOW + "========================");
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String args[]){
