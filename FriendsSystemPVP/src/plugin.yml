@@ -1,16 +1,16 @@
 main: net.junnesejer.bukkit.plugins.Main
 name: FriendsSystem
 version: 0.1
-authors: Junnesejer
+author: Junnesejer
 descriptions: Beta
 commands:
     friend:
         description: Requests to add a friend
         usage: /friend <playername>
-    friendaccept
+    friendaccept:
         description: Accepts a friend request
         usage: /friendaccept <playername>
-    frienddeny
+    frienddeny:
         description: Denies a friend request
         usage: /frienddeny <playername>
     friends:
